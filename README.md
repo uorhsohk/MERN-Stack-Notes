@@ -16,3 +16,8 @@ and you get nothing back (Content-Length: 0), then most likely you have forgotte
 ```
 app.use(express.json())
 ```
+
+Reason:
+
+The express json is a middleware, and middlewares are functions that can be used for handling request and response objects.
+The json parse takes take from the request and parses it into a JS  Object and assign it then to the *new* body property.
